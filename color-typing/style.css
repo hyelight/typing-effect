@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap");
+
+:root {
+  --font-family: Lakki Reddy;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: bisque;
+}
+.iconAndText {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  /* =>가운데로 오게 하는 방법 1 */
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; 
+  =>가운데로 오게 하는 방법 2 */
+}
+.fa-brush {
+  color: rgb(121, 60, 17);
+  font-size: 8rem;
+  margin-bottom: 10px;
+}
+.lg-text {
+  font-family: var(--font-family);
+  font-size: 40px;
+  font-weight: bold;
+}
+.sm-text {
+  font-family: var(--font-family);
+  font-size: large;
+}
+.dynamic {
+  position: relative;
+  display: inline-block;
+}
+.dynamic::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 80%;
+  width: 3px;
+  top: 0;
+  right: -10px;
+  background-color: white;
+}
+.dynamic.active::after {
+  display: none;
+}
